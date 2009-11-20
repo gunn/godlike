@@ -13,11 +13,17 @@ Rake::TestTask.new(:test) do |t|
   t.verbose = true
 end
 
-desc 'Generate documentation for the godlike plugin.'
-Rake::RDocTask.new(:rdoc) do |rdoc|
-  rdoc.rdoc_dir = 'rdoc'
-  rdoc.title    = 'Godlike'
-  rdoc.options << '--line-numbers' << '--inline-source'
-  rdoc.rdoc_files.include('README')
-  rdoc.rdoc_files.include('lib/**/*.rb')
+begin
+  require 'jeweler'
+  Jeweler::Tasks.new do |gemspec|
+    gemspec.name = "godlike"
+    gemspec.summary = "Feel godly after your tests"
+    gemspec.description = "Announcers can be motivating"
+    gemspec.email = "Adman1965@gmail.com"
+    gemspec.homepage = "http://github.com/Adman65/godlike"
+    gemspec.authors = ["Adam Hawkins"]
+    Jeweler::GemcutterTasks.new
+  end
+rescue LoadError
+  puts "Jeweler not available. Install it with: sudo gem install jeweler"
 end

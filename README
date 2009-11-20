@@ -1,13 +1,40 @@
-Godlike
-=======
+# Godlike
 
-Introduction goes here.
+The best autotest add on ever. Its motivational. Its awesome. Its Godlike. Godlike is an autotest hook that places cool sounds when you acheive 100% test passing rate. The default sound is the Unreal Tournament voice: GODLIKE
+
+## Requirements
+
+Godlike only works for Macs because they are the most god like.	
+	
+## Installation
+
+	sudo gem install gemcutter
+	sudo gem tumble
+	sudo gem install godlike
+	
+	# .autotest
+	require 'godlike'
+
+## Customization
+
+You can choose any of the few cools sounds I've included in the gem.
+
+  * godlike.wav
+  * headshot.wav
+  * killingspree.wav
+  * perfect.wav
+  * supreme_victory.wav
+  * ultrakill.wav
+
+Set the GODLIKE_SOUND consant in your autotest file
+
+	require 'godlike'
+	GODLIKE_SOUND = 'supreme_victory' # leave off extension
+	# Note, you can also provided an absolute path to play your own sounds
+	
+## Notes
+
+Big thanks to [Carlos Brando](http://github.com/carlosbrando/autotest-notification) for writing the cocoa script to play audio. 
 
 
-Example
-=======
 
-Example goes here.
-
-
-Copyright (c) 2009 [name of plugin creator], released under the MIT license
