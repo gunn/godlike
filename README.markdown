@@ -19,12 +19,14 @@ Godlike only works for Macs because they are the most god like.
 
 You can choose any of the few cools sounds I've included in the gem.
 
-  * godlike.wav
-  * headshot.wav
-  * killingspree.wav
-  * perfect.wav
-  * supreme_victory.wav
-  * ultrakill.wav
+  * godlike.mp3
+  * headshot.mp3
+  * killingspree.mp3
+  * perfect.mp3
+  * supreme_victory.mp3
+  * ultrakill.mp3
+  * frag.mp3
+  * flag_capture.mp3
 
 Set the GODLIKE_SOUND consant in your autotest file
 
@@ -34,7 +36,7 @@ Set the GODLIKE_SOUND consant in your autotest file
 
 Or set to a proc:
 
-	sounds = %w[godlike headshot killingspree perfect supreme_victory ultrakill]
+	sounds = %w[godlike headshot killingspree perfect supreme_victory ultrakill flag_capture frag]
 	GODLIKE_SOUND = proc { sounds[(sounds.size*rand).to_i] }
 	# Pic a sound at random each time
 

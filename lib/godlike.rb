@@ -15,13 +15,13 @@ def success
   
   if defined?(GODLIKE_SOUND)
     sound_name = GODLIKE_SOUND.is_a?(Proc) ? GODLIKE_SOUND.call : GODLIKE_SOUND
-    if File.exists? "#{sounds_directory}/#{sound_name}.wav"
-      sound_file = "#{sounds_directory}/#{sound_name}.wav"
+    if File.exists? "#{sounds_directory}/#{sound_name}.mp3"
+      sound_file = "#{sounds_directory}/#{sound_name}.mp3"
     else
       sound_file = sound_name
     end
   else
-    sound_file = "#{sounds_directory}/godlike.wav"
+    sound_file = "#{sounds_directory}/godlike.mp3"
   end
   play_sound(sound_file)
 end
