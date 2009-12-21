@@ -31,8 +31,16 @@ Set the GODLIKE_SOUND consant in your autotest file
 	require 'godlike'
 	GODLIKE_SOUND = 'supreme_victory' # leave off extension
 	# Note, you can also provided an absolute path to play your own sounds
-	
+
+Or set to a proc:
+
+	sounds = %w[godlike headshot killingspree perfect supreme_victory ultrakill]
+	GODLIKE_SOUND = proc { sounds[(sounds.size*rand).to_i] }
+	# Pic a sound at random each time
+
+
 ## Notes
+The Autotest hook :all\_good was firing even on failure for me so I've changed it to use the :ran\_command hook plus some checks. -Arthur
 
 Big thanks to [Carlos Brando](http://github.com/carlosbrando/autotest-notification) for writing the cocoa script to play audio. 
 
